@@ -12,7 +12,7 @@ runs:
           python3 -m pip install -U pip
 
       - name: Install MPICH
-        shell: bask -el {0}
+        shell: bash -el {0}
         run: |
           apt-get install -y libmpich-dev
 
