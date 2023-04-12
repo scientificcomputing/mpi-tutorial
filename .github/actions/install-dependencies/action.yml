@@ -15,7 +15,7 @@ runs:
       with:
           miniforge-variant: Mambaforge
           miniforge-version: latest
-          activate-environment: mpi
+          activate-environment: mpi-tutorial
           python-version: ${{ inputs.python-version }}
           use-mamba: true
           environment-file: environment.yml
@@ -33,8 +33,8 @@ runs:
     - name: Environment cache
       uses: actions/cache@v3
       with:
-        path: /opt/conda/envs/mpi
-        key: env-conda-mpi-${{ inputs.python-version }}-${{ hashFiles('.github/actions/install-dependencies/*') }}
+        path: /opt/conda/envs/mpi-tutorial
+        key: env-conda-mpi-tutorial-${{ inputs.python-version }}-${{ hashFiles('.github/actions/install-dependencies/*') }}
       id: cache
 
 

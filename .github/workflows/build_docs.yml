@@ -22,7 +22,7 @@ jobs:
 
       - name: Build the book
         run: 
-           conda run -n mpi-tutorial jupyter-book build . -W
+          jupyter-book build . -W
       - uses: actions/upload-artifact@v3
         with:
           name: documentation
