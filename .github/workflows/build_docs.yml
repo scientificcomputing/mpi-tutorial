@@ -12,7 +12,6 @@ env:
 jobs:
   build-book:
     runs-on: ubuntu-latest
-    container: ubuntu:22.04
  
     steps:
 
@@ -21,14 +20,9 @@ jobs:
       - name: Install common packages
         uses: ./.github/actions/install-dependencies
 
-      - name: Install book deps
-        run:
-          python3 -m pip install -r requirements.txt
-
       - name: Build the book
         run: 
-          jupyter-book build . -W
-
+          conda run -n mpi-tutorial jupyter-book build . -W
       - uses: actions/upload-artifact@v3
         with:
           name: documentation

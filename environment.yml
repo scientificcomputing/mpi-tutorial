@@ -1,0 +1,9 @@
+name: mpi-tutorial
+channels:
+  - conda-forge
+dependencies:
+  - mpich
+  - ipyparallel
+  - jupyter-book
+  - mpi4py
+  - autopep8
