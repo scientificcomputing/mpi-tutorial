@@ -1,4 +1,0 @@
-ipyparallel
-mpi4py
-jupyter-book
-autopep8

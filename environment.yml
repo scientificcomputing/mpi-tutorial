@@ -1,0 +1,9 @@
+name: mpi-tutorial-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - ipyparallel
+  - jupyter-book
+  - mpi4py
+  - autopep8
