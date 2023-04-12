@@ -1,4 +1,4 @@
-name: mpi-tutorial-env
+name: mpi-tutorial
 channels:
   - conda-forge
 dependencies:

@@ -22,7 +22,6 @@ jobs:
 
       - name: Build the book
         run: |
-          conda activate mpi
           jupyter-book build . -W
 
       - uses: actions/upload-artifact@v3
