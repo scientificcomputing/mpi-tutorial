@@ -12,14 +12,6 @@ runs:
   steps:
     # cache ref https://github.com/conda-incubator/setup-miniconda#caching-packages
 
-    # caching conda packages saves download time, but not unpack / solve
-    # - name: Cache conda packages
-    #   uses: actions/cache@v2
-    #   with:
-    #     path: ~/conda_pkgs_dir
-    #     key:
-    #       conda-pkgs-${{ inputs.python-version }}-${{ hashFiles('.github/actions/install-dependencies/*') }}-${{ hashFiles('environment.yml') }}
-
     - name: Setup conda-forge
       uses: conda-incubator/setup-miniconda@v2
       with:
