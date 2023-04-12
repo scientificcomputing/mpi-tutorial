@@ -15,7 +15,7 @@ You can also use conda to build your environment
 ```bash
 conda env update --file environment.yml --name name-of-your-env
 ```
-4. Create an `.ipynb` in the [notebooks](./notebooks/) folder, or modify the existing notebooks. If a new notebook has been created, add it to the appropriate section of [_toc.yml](_toc.yml).
+4. Create an `.ipynb` in the [notebooks](./notebooks/) folder, or modify the existing notebooks. If a new notebook has been created, add it to the appropriate section of [_toc.yml](_toc.yml). You can use the [template-notebook](./notebooks/template.ipynb) as a starting point.
 5. Make sure the webpage builds correctly by calling `jupyter book build -W .` from the root of the repository. You can inspect the webpage locally by opening [_build/html/index.html](_build/html/index.html) with the web-browser of your choice.
 6. Make a [pull-request](https://github.com/scientificcomputing/mpi-tutorial/compare) to the main branch of this repo.
 7. Make sure that the workflow [Build documentation](https://github.com/scientificcomputing/mpi-tutorial/actions/workflows/build_docs.yml) passes.
