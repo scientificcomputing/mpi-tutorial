@@ -22,7 +22,7 @@ jobs:
 
       - name: Build the book
         run: |
-          mamba activate mpi
+          conda activate mpi
           jupyter-book build . -W
 
       - uses: actions/upload-artifact@v3
