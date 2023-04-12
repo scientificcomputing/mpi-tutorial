@@ -4,3 +4,6 @@ parts:
   - caption: Introduction
     chapters:
       - file: notebooks/introduction
+      - file: notebooks/intro-mpi/intro-mpi
+        sections:
+          - file: notebooks/intro-mpi/send-recv
