@@ -1,22 +1,40 @@
 name: Install dependencies
 
+inputs:
+  python-version:
+    description: Python version to install
+    required: true
+    type: string
+    defaut: "3.11"
 
 runs:
   using: composite
   steps:
-      - name: Install and upgrade pip
-        shell: bash -el {0}
-        run: |
-          apt-get update
-          apt-get install -y python3-pip
-          python3 -m pip install -U pip
+    - name: Setup conda-forge
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
+          activate-environment: mpi
+          python-version: ${{ inputs.python-version }}
+          use-mamba: true
+          environment-file: environment.yml
 
-      - name: Install MPICH
-        shell: bash -el {0}
-        run: |
-          apt-get install -y libmpich-dev
+    - name: Prepare cache
+      shell: bash -el {0}
+      run: |
+        if [[ $CONDA != /opt/conda ]]; then
+          mkdir -p /opt/conda/
+          ln -s $CONDA/envs /opt/conda/envs
+        fi
+        echo CONDA=$CONDA
+        mamba env list
+        
+    - name: Environment cache
+      uses: actions/cache@v3
+      with:
+        path: /opt/conda/envs/mpi
+        key: env-conda-mpi-${{ inputs.python-version }}-${{ hashFiles('.github/actions/install-dependencies/*') }}
+      id: cache
 
-      - name: Install requirements
-        shell: bash -el {0}
-        run: |
-          python3 -m pip install -r requirements.txt
+
