@@ -20,21 +20,21 @@ runs:
           use-mamba: true
           environment-file: environment.yml
 
-    - name: Prepare cache
-      shell: bash -el {0}
-      run: |
-        if [[ $CONDA != /opt/conda ]]; then
-          mkdir -p /opt/conda/
-          ln -s $CONDA/envs /opt/conda/envs
-        fi
-        echo CONDA=$CONDA
-        mamba env list
+    # - name: Prepare cache
+    #   shell: bash -el {0}
+    #   run: |
+    #     if [[ $CONDA != /opt/conda ]]; then
+    #       mkdir -p /opt/conda/
+    #       ln -s $CONDA/envs /opt/conda/envs
+    #     fi
+    #     echo CONDA=$CONDA
+    #     mamba env list
         
-    - name: Environment cache
-      uses: actions/cache@v3
-      with:
-        path: /opt/conda/envs/mpi-tutorial
-        key: env-conda-mpi-tutorial-${{ inputs.python-version }}-${{ hashFiles('.github/actions/install-dependencies/*') }}
-      id: cache
+    # - name: Environment cache
+    #   uses: actions/cache@v3
+    #   with:
+    #     path: /opt/conda/envs/mpi-tutorial
+    #     key: env-conda-mpi-tutorial-${{ inputs.python-version }}-${{ hashFiles('.github/actions/install-dependencies/*') }}
+    #   id: cache
 
 
