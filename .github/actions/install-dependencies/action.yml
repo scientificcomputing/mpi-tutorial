@@ -22,8 +22,6 @@ runs:
           use-mamba: true
           # uncomment to install env in one go (without caching)
           # environment-file: environment.yml
-          # needed for caching
-          use-only-tar-bz2: true
 
     - name: Get Date
       id: get-date
@@ -36,10 +34,21 @@ runs:
       with:
         path: ${{ env.CONDA }}/envs/mpi-tutorial
         key:
-          conda-env-${{ steps.get-date.outputs.today }}-${{ inputs.python-version }}-${{ hashFiles('environment.yml') }}
+          conda-env-${{ steps.get-date.outputs.today }}-${{ inputs.python-version }}-${{ hashFiles('environment.yml') }}-${{ hashFiles('.github/actions/install-dependencies/**') }}
 
+    - name: Clear package cache
+      # package cache seems to be stale
+      run:
+          mamba clean -y --index-cache
+
+      shell: bash -el {0}
     - name: Update environment
       if: steps.cache-env.outputs.cache-hit != 'true'
       run:
           mamba env update -n mpi-tutorial -f environment.yml
+      shell: bash -el {0}
+
+    - name: List environment
+      run:
+          mamba list -n mpi-tutorial
       shell: bash -el {0}
