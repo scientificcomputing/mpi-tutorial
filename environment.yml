@@ -12,4 +12,4 @@ dependencies:
   - pandas
   - autopep8
   - fenics-dolfinx
-  - python=3.11
+  - python=3.9
