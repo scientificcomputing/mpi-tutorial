@@ -38,8 +38,19 @@ runs:
         key:
           conda-env-${{ steps.get-date.outputs.today }}-${{ inputs.python-version }}-${{ hashFiles('environment.yml') }}
 
+    - name: Clear package cache
+      # package cache seems to be stale
+      run:
+          mamba clean -y --index-cache
+
+      shell: bash -el {0}
     - name: Update environment
       if: steps.cache-env.outputs.cache-hit != 'true'
       run:
           mamba env update -n mpi-tutorial -f environment.yml
+      shell: bash -el {0}
+
+    - name: List environment
+      run:
+          mamba list -n mpi-tutorial
       shell: bash -el {0}
