@@ -7,3 +7,4 @@ parts:
       - file: notebooks/intro-mpi/intro-mpi
         sections:
           - file: notebooks/intro-mpi/send-recv
+      - file: notebooks/send-vs-send
