@@ -8,6 +8,7 @@ on:
 
 env:
   DEB_PYTHON_INSTALL_LAYOUT: deb_system
+  IPP_NONINTERACTIVE: "1"
 
 defaults:
   run:
