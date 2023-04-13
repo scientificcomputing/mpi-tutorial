@@ -15,12 +15,11 @@ runs:
     - name: Setup conda-forge
       uses: conda-incubator/setup-miniconda@v2
       with:
-          # miniforge-variant: Mambaforge
-          # miniforge-version: latest
+          miniforge-variant: Mambaforge
+          miniforge-version: latest
           activate-environment: mpi-tutorial
           python-version: ${{ inputs.python-version }}
-          # Do not use mamba as it resolves differently than conda
-          # use-mamba: false
+          use-mamba: true
           # uncomment to install env in one go (without caching)
           # environment-file: environment.yml
           # needed for caching
@@ -41,7 +40,6 @@ runs:
 
     - name: Update environment
       if: steps.cache-env.outputs.cache-hit != 'true'
-      # Change to mamba if we want to use it
       run:
-          conda env update -n mpi-tutorial -f environment.yml
+          mamba env update -n mpi-tutorial -f environment.yml
       shell: bash -el {0}
