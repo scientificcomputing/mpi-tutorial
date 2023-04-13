@@ -22,8 +22,6 @@ runs:
           use-mamba: true
           # uncomment to install env in one go (without caching)
           # environment-file: environment.yml
-          # needed for caching
-          use-only-tar-bz2: true
 
     - name: Get Date
       id: get-date
