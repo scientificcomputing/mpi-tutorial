@@ -19,7 +19,8 @@ runs:
           miniforge-version: latest
           activate-environment: mpi-tutorial
           python-version: ${{ inputs.python-version }}
-          use-mamba: true
+          # Do not use mamba as it resolves differently than conda
+          use-mamba: false
           # uncomment to install env in one go (without caching)
           # environment-file: environment.yml
           # needed for caching
