@@ -6,6 +6,7 @@ dependencies:
   - mpich
   - ipyparallel
   - ipywidgets
+  - sphinx-book-theme>1
   - jupyter-book
   - mpi4py
   - numpy
