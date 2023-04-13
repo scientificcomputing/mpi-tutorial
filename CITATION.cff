@@ -1,0 +1,31 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: MPI tutorial
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Ana
+    family-names: Budisa
+    affiliation: Simula Research Laboratory
+  - given-names: Jørgen Schartum
+    family-names: Dokken
+    affiliation: Simula Research Laboratory
+  - given-names: Halvor
+    family-names: Herlyng
+    affiliation: Simula Research Laboratory
+  - given-names: Sidney
+    family-names: Pontes-Filho
+    affiliation: Simula Research Laboratory
+  - given-names: Benjamin
+    family-names: Ragan-Kelley
+    affiliation: Simula Research Laboratory
+identifiers:
+  - type: url
+    value: 'https://scientificcomputing.github.io/mpi-tutorial/'
+repository-code: 'https://github.com/scientificcomputing/mpi-tutorial'
+url: 'https://scientificcomputing.github.io/mpi-tutorial/'
+license: MIT
