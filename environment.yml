@@ -2,9 +2,12 @@ name: mpi-tutorial
 channels:
   - conda-forge
 dependencies:
+  - altair
   - mpich
   - ipyparallel
+  - ipywidgets
   - jupyter-book
   - mpi4py
-  - autopep8
   - numpy
+  - pandas
+  - autopep8

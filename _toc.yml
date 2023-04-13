@@ -7,3 +7,4 @@ parts:
         sections:
           - file: notebooks/intro-mpi/send-recv
           - file: notebooks/intro-mpi/scatter-gather
+          - file: notebooks/send-vs-send
