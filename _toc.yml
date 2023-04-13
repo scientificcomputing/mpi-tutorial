@@ -1,9 +1,9 @@
 format: jb-book
 root: index
 parts:
-  - caption: Introduction
+  - caption: Introduction to MPI
     chapters:
-      - file: notebooks/introduction
       - file: notebooks/intro-mpi/intro-mpi
         sections:
           - file: notebooks/intro-mpi/send-recv
+          - file: notebooks/intro-mpi/scatter-gather

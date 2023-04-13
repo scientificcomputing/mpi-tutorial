@@ -7,3 +7,4 @@ dependencies:
   - jupyter-book
   - mpi4py
   - autopep8
+  - numpy
