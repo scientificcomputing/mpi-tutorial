@@ -14,9 +14,9 @@ This MPI tutorial is interactive, which means that all the code presented in can
 The content here is based on a large variety of sources, referenced in each indvidual page.
 The authors are greatful for the authors of all the resources.
 
-## Reference
-For citing this repo, see:
-**add citation here **
+## Citing
+Please cite this repo as
+*Budisa, A., Dokken, J. S., Herlyng, H., Pontes-Filho, S., & Ragan-Kelley, B. MPI tutorial. https://github.com/scientificcomputing/mpi-tutorial*
 
 ## Contents
 ```{tableofcontents}
