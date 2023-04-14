@@ -12,5 +12,6 @@ dependencies:
   - pandas
   - autopep8
   - fenics-dolfinx
+  - pyvista
   - pip:
     - ipyparallel>=8.6
