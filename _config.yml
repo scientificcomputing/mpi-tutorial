@@ -50,3 +50,4 @@ sphinx:
     suppress_warnings: ["mystnb.unknown_mime_type"]
 
 exclude_patterns: [README.md, notebooks/template.ipynb]
+only_build_toc_files: true
