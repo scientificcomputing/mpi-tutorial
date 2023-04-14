@@ -3,10 +3,12 @@ channels:
   - conda-forge
 dependencies:
   - altair
+  - cycler
   - mpich
   - ipyparallel>=8.6
   - ipywidgets
   - jupyter-book
+  - matplotlib-base
   - mpi4py
   - numpy
   - pandas
