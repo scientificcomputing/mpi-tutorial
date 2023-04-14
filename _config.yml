@@ -10,9 +10,9 @@ logo: logo.png
 execute:
   execute_notebooks: cache
   timeout: 1800
-  exclude_patterns:
+  #exclude_patterns:
     # temporarily skip dolfinx rebuild so we can figure it out
-    - notebooks/dolfinx_MPI_tutorial*
+   # - notebooks/dolfinx_MPI_tutorial*
 
 # Information about where the book exists on the web
 repository:
