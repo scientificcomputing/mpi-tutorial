@@ -4,13 +4,12 @@ channels:
 dependencies:
   - altair
   - mpich
-  - ipyparallel
+  - ipyparallel>=8.6
   - ipywidgets
   - jupyter-book
   - mpi4py
   - numpy
   - pandas
+  - pyvista
   - autopep8
   - fenics-dolfinx
-  - pip:
-    - ipyparallel>=8.6
