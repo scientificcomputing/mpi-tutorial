@@ -1,10 +1,12 @@
 FROM condaforge/mambaforge 
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV PYVISTA_JUPYTER_BACKEND=panel
+ENV PYVISTA_OFF_SCREEN=False
 
 # Install ssh (missing dependency to run conda envs)
 RUN apt-get update && \
-    apt-get install -y ssh build-essential
+    apt-get install -y ssh build-essential libgl1-mesa-glx xvfb
 
 # Upgrade mamba
 RUN mamba upgrade -y mamba
