@@ -16,3 +16,4 @@ dependencies:
   - autopep8
   - fenics-dolfinx
   - petsc4py
+  - panel

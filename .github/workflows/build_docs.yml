@@ -17,6 +17,10 @@ defaults:
 jobs:
   build-book:
     runs-on: ubuntu-latest
+    container: ubuntu:22.04
+    env:
+      PYVISTA_OFF_SCREEN: false
+      PYVISTA_JUPYTER_BACKEND: "panel"
 
     steps:
 

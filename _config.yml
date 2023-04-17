@@ -6,13 +6,11 @@ author: Jørgen S. Dokken
 logo: logo.png
 
 # Cache execution of notebooks
+
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: cache
   timeout: 1800
-  exclude_patterns:
-    # temporarily skip dolfinx rebuild so we can figure it out
-    - notebooks/dolfinx_MPI_tutorial*
 
 # Information about where the book exists on the web
 repository:
