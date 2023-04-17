@@ -56,7 +56,7 @@ runs:
     
     - name: Install pyvista dependencies
       shell: bash -el {0}
-      run:|
+      run: |
         apt-get update
         apt-get install -y libgl1-mesa-glx xvfb
 
