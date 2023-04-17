@@ -6,10 +6,11 @@ author: Jørgen S. Dokken
 logo: logo.png
 
 # Cache execution of notebooks
+
 # See https://jupyterbook.org/content/execute.html
-#execute:
-  #execute_notebooks: cache
-  #timeout: 1800
+execute:
+  execute_notebooks: cache
+  timeout: 1800
 
 # Information about where the book exists on the web
 repository:
