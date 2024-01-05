@@ -14,7 +14,7 @@ dependencies:
   - pyvista>=0.43.*
   - autopep8
   - jupyterlab
-  - fenics-dolfinx==0.6.*
+  - fenics-dolfinx==0.7.*
   - petsc4py
   - trame
   - ipywidgets
