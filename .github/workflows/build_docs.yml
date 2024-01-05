@@ -20,11 +20,10 @@ jobs:
     container: ubuntu:22.04
     env:
       PYVISTA_OFF_SCREEN: false
-      PYVISTA_JUPYTER_BACKEND: "panel"
+      PYVISTA_JUPYTER_BACKEND: "html"
 
     steps:
-
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install common packages
         uses: ./.github/actions/install-dependencies
@@ -36,10 +35,9 @@ jobs:
           key: jupyter-cache-${{ hashFiles('environment.yml') }}
 
       - name: Build the book
-        run:
-          jupyter-book build . -W
+        run: jupyter-book build . -W
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         # always upload artifact, which can include error messages
         if: always()
         with:

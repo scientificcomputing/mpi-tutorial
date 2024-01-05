@@ -1,7 +1,7 @@
 FROM condaforge/mambaforge 
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV PYVISTA_JUPYTER_BACKEND=panel
+ENV PYVISTA_JUPYTER_BACKEND=html
 ENV PYVISTA_OFF_SCREEN=False
 
 # Install ssh (missing dependency to run conda envs)
