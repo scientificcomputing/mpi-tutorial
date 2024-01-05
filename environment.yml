@@ -17,3 +17,4 @@ dependencies:
   - fenics-dolfinx==0.6.*
   - petsc4py
   - trame
+  - ipywidgets
