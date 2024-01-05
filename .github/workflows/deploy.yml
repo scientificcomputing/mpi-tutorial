@@ -23,7 +23,6 @@ env:
   DEB_PYTHON_INSTALL_LAYOUT: deb_system
 
 jobs:
-
   build-book:
     uses: ./.github/workflows/build_docs.yml
 
@@ -33,25 +32,25 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
- 
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      
+        uses: actions/checkout@v4
+
       - name: Setup Pages
-        uses: actions/configure-pages@v2
-  
+        uses: actions/configure-pages@v4
+
       - name: Download docs artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: documentation
           path: "./public"
 
       - name: Upload page artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "./public"
 
       - name: Deploy webpage
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
